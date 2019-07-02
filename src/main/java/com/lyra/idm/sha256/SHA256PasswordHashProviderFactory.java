@@ -28,7 +28,7 @@ import org.keycloak.models.KeycloakSessionFactory;
  */
 @Deprecated
 public class SHA256PasswordHashProviderFactory implements PasswordHashProviderFactory {
-    public static final String ID = "sha_256";
+    public static final String ID = "sha256";
     public static final int DEFAULT_ITERATIONS = 50_000;
 
     @Override

@@ -1,6 +1,5 @@
 package com.lyra.idm.sha256;
 
-import org.apache.commons.io.Charsets;
 import org.keycloak.credential.CredentialModel;
 import org.keycloak.credential.hash.PasswordHashProvider;
 import org.keycloak.models.PasswordPolicy;
@@ -49,7 +48,7 @@ public class SHA256PasswordHashProvider implements PasswordHashProvider {
                 hashed = digest.digest(hashed);
             }
 
-            return new String(Base64.getEncoder().encode(hashed), Charsets.UTF_8);
+            return new String(Base64.getEncoder().encode(hashed), StandardCharsets.UTF_8);
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(providerId + " not supported.", e);
         }
